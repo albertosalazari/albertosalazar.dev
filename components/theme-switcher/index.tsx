@@ -1,7 +1,7 @@
 import ReactSwitch from "react-switch"
 import { useContext } from "react"
 import { Container, ThemeIconImage } from "./styles"
-import { MyThemeContext } from "../../context/theme"
+import { CustomThemeContext } from "../../context/theme"
 
 type ThemeIconProps = {
   src: string
@@ -17,7 +17,7 @@ function ThemeIcon({ src, alt }: ThemeIconProps) {
 }
 
 export function ThemeSwitcher() {
-  const { theme, handleThemeSwitch } = useContext(MyThemeContext)
+  const { theme, handleThemeSwitch } = useContext(CustomThemeContext)
 
   return (
     <ReactSwitch

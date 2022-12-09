@@ -11,9 +11,9 @@ type MyThemeProviderProps = {
   children: ReactNode
 }
 
-export const MyThemeContext = createContext<MyThemeContextProps>({ theme: lightTheme, handleThemeSwitch: () => {} })
+export const CustomThemeContext = createContext<MyThemeContextProps>({ theme: lightTheme, handleThemeSwitch: () => {} })
 
-export function MyThemeProvider({ children }: MyThemeProviderProps) {
+export function CustomThemeProvider({ children }: MyThemeProviderProps) {
   const [theme, setTheme] = useState(lightTheme)
 
   function handleThemeSwitch() {
@@ -32,8 +32,8 @@ export function MyThemeProvider({ children }: MyThemeProviderProps) {
   }, [])
 
   return (
-    <MyThemeContext.Provider value={{ theme: theme, handleThemeSwitch: handleThemeSwitch }}>
+    <CustomThemeContext.Provider value={{ theme: theme, handleThemeSwitch: handleThemeSwitch }}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </MyThemeContext.Provider>
+    </CustomThemeContext.Provider>
   )
 }
