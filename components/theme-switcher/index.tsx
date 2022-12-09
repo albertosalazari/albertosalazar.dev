@@ -1,6 +1,5 @@
 import ReactSwitch from "react-switch"
 import { useContext } from "react"
-import { ThemeContext } from "styled-components"
 import { Container, ThemeIconImage } from "./styles"
 import { MyThemeContext } from "../../context/theme"
 
@@ -18,7 +17,6 @@ function ThemeIcon({ src, alt }: ThemeIconProps) {
 }
 
 export function ThemeSwitcher() {
-  const themeContext = useContext(ThemeContext)
   const { theme, handleThemeSwitch } = useContext(MyThemeContext)
 
   return (
@@ -27,8 +25,8 @@ export function ThemeSwitcher() {
       uncheckedIcon={<ThemeIcon src={"sun.png"} alt={"sol do botão de tema"} />}
       checkedIcon={<ThemeIcon src={"moon.png"} alt={"lua do botão de tema"} />}
       checked={theme.theme === "dark"}
-      offColor={themeContext.colors.secondary}
-      onColor={themeContext.colors.secondary}
+      offColor={theme.colors.secondary}
+      onColor={theme.colors.secondary}
     />
   )
 }
