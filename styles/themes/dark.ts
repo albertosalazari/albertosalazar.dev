@@ -1,6 +1,6 @@
-import { CustomTheme } from "styled-components"
+import { DefaultTheme } from "styled-components"
 
-export const darkTheme: CustomTheme = {
+export const darkTheme: DefaultTheme = {
   theme: "dark",
   colors: {
     primary: "#444746",

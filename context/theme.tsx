@@ -1,19 +1,19 @@
 import { createContext, ReactNode, useEffect, useState } from "react"
 import { lightTheme, darkTheme } from "@themes"
-import { CustomTheme, ThemeProvider } from "styled-components"
+import { DefaultTheme, ThemeProvider } from "styled-components"
 
-type MyThemeContextProps = {
-  theme: CustomTheme
+type CustomThemeContextProps = {
+  theme: DefaultTheme
   handleThemeSwitch(): void
 }
 
-type MyThemeProviderProps = {
+type CustomThemeProviderProps = {
   children: ReactNode
 }
 
-export const CustomThemeContext = createContext<MyThemeContextProps>({ theme: lightTheme, handleThemeSwitch: () => {} })
+export const CustomThemeContext = createContext<CustomThemeContextProps>({ theme: lightTheme, handleThemeSwitch: () => {} })
 
-export function CustomThemeProvider({ children }: MyThemeProviderProps) {
+export function CustomThemeProvider({ children }: CustomThemeProviderProps) {
   const [theme, setTheme] = useState(lightTheme)
 
   function handleThemeSwitch() {
