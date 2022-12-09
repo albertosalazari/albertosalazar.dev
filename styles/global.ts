@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
         height: 100%;
         width: 100%;
         scroll-behavior: smooth;
+        background-color: ${(props) => props.theme.colors.background};
     }
     ol,
     ul {
@@ -32,6 +33,6 @@ export const GlobalStyle = createGlobalStyle`
     }
     h1,h2,h3,h4,h5,h6,p {
         font-family: sans-serif;
-        color: #000;
+        color: ${(props) => props.theme.colors.text};
     }
 `
