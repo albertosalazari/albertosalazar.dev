@@ -2,7 +2,7 @@ import { createContext, ReactNode, useEffect, useState } from "react"
 import { EN_US, Language, PT_BR } from "@languages"
 type CustomLanguageContextProps = {
   language: Language
-  languageSwitch(): void
+  languageSwitch(language: any): void
 }
 
 type CustomLanguageProviderProps = {
@@ -14,9 +14,9 @@ export const CustomLanguageContext = createContext<CustomLanguageContextProps>({
 export function CustomLanguageProvider({ children }: CustomLanguageProviderProps) {
   const [language, setLanguage] = useState(PT_BR)
 
-  function languageSwitch() {
-    setLanguage(language.language === "pt-br" ? EN_US : PT_BR)
-    localStorage.setItem("language", language.language === "pt-br" ? "en-us" : "pt-br")
+  function languageSwitch(language: any) {
+    setLanguage(language)
+    localStorage.setItem("language", language === PT_BR ? "pt-br" : "en-us")
   }
 
   useEffect(() => {
