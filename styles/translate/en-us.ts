@@ -1,9 +1,9 @@
 import { Language } from "./type"
 
 export const EN_US: Language = {
-  language: "en-us",
+  LANGUAGE: "en-us",
 
-  sidebar: {
+  SIDEBAR: {
     PROFILE: "Profile",
     XP: "Experiences",
     SKILLS: "Skills",

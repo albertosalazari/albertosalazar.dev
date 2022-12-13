@@ -1,6 +1,6 @@
 export type Language = {
-  language: string
-  sidebar: {
+  LANGUAGE: string
+  SIDEBAR: {
     PROFILE: string
     XP: string
     SKILLS: string

@@ -1,8 +1,8 @@
 import { Language } from "./type"
 
 export const PT_BR: Language = {
-  language: "pt-br",
-  sidebar: {
+  LANGUAGE: "pt-br",
+  SIDEBAR: {
     PROFILE: "Perfil",
     XP: "Experiências",
     SKILLS: "Habilidades",

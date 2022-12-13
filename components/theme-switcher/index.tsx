@@ -1,7 +1,7 @@
 import ReactSwitch from "react-switch"
 import { useContext } from "react"
 import { Container, ThemeIconImage } from "./styles"
-import { CustomThemeContext } from "../../context/theme"
+import { CustomThemeContext } from "@context"
 
 type ThemeIconProps = {
   src: string
