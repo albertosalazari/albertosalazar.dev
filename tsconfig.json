@@ -15,7 +15,10 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@themes": ["./styles/themes"]
+      "@themes": ["./styles/themes"],
+      "@components": ["./components"],
+      "@context": ["./context"],
+      "@languages": ["./styles/translate"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

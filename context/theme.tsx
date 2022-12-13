@@ -4,19 +4,19 @@ import { DefaultTheme, ThemeProvider } from "styled-components"
 
 type CustomThemeContextProps = {
   theme: DefaultTheme
-  handleThemeSwitch(): void
+  themeSwitch(): void
 }
 
 type CustomThemeProviderProps = {
   children: ReactNode
 }
 
-export const CustomThemeContext = createContext<CustomThemeContextProps>({ theme: lightTheme, handleThemeSwitch: () => {} })
+export const CustomThemeContext = createContext<CustomThemeContextProps>({ theme: lightTheme, themeSwitch: () => {} })
 
 export function CustomThemeProvider({ children }: CustomThemeProviderProps) {
   const [theme, setTheme] = useState(lightTheme)
 
-  function handleThemeSwitch() {
+  function themeSwitch() {
     setTheme(theme.theme === "light" ? darkTheme : lightTheme)
     localStorage.setItem("theme", theme.theme === "light" ? "dark" : "light")
   }
@@ -32,7 +32,7 @@ export function CustomThemeProvider({ children }: CustomThemeProviderProps) {
   }, [])
 
   return (
-    <CustomThemeContext.Provider value={{ theme: theme, handleThemeSwitch: handleThemeSwitch }}>
+    <CustomThemeContext.Provider value={{ theme: theme, themeSwitch: themeSwitch }}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </CustomThemeContext.Provider>
   )
