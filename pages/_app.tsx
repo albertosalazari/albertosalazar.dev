@@ -9,8 +9,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <CustomLanguageProvider>
         <CustomThemeProvider>
           <GlobalStyle />
-          <Component {...pageProps} />
           <Sidebar />
+          <Component {...pageProps} />
         </CustomThemeProvider>
       </CustomLanguageProvider>
     </>

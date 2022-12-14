@@ -1,6 +1,6 @@
 import { ThemeSwitcher, Translator } from "@components"
 import { useContext } from "react"
-import { Navbar } from "./styles"
+import { Navbar, NavbarItem } from "./styles"
 import { CustomLanguageContext } from "@context"
 
 export function Sidebar() {
@@ -8,10 +8,10 @@ export function Sidebar() {
 
   return (
     <Navbar>
-      <p>{language.SIDEBAR.PROFILE}</p>
-      <p>{language.SIDEBAR.XP}</p>
-      <p>{language.SIDEBAR.SKILLS}</p>
-      <p>{language.SIDEBAR.CONTACT}</p>
+      <NavbarItem href="#profile">{language.SIDEBAR.PROFILE}</NavbarItem>
+      <NavbarItem href="#xp">{language.SIDEBAR.XP}</NavbarItem>
+      <NavbarItem href="#skills">{language.SIDEBAR.SKILLS}</NavbarItem>
+      <NavbarItem href="#contact">{language.SIDEBAR.CONTACT}</NavbarItem>
       <ThemeSwitcher />
       <Translator />
     </Navbar>

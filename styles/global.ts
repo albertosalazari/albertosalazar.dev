@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        font-family: sans-serif;
     }
     html,body {
         height: 100%;
@@ -31,8 +32,10 @@ export const GlobalStyle = createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
-    h1,h2,h3,h4,h5,h6,p {
-        font-family: sans-serif;
+    h1,h2,h3,h4,h5,h6,p,a {
         color: ${(props) => props.theme.colors.text};
+    }
+    #__next {
+        padding-top: 70px;
     }
 `
